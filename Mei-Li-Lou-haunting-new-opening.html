@@ -33,10 +33,10 @@ canvas{width:100%;height:100%;image-rendering:pixelated;display:block}
 #dpad{display:none;gap:6px;margin:8px;grid-template-columns:repeat(3,48px)}
 #dpad button{height:48px;font-size:18px}
 @media(pointer:coarse){#dpad{display:grid}}
-body{font-family:"Courier New","Noto Sans Mono CJK TC","Microsoft JhengHei",monospace}#endt .sub.en{font-family:inherit}#stage{width:100%;display:grid;place-items:center}#settings{position:absolute;bottom:5px;right:5px;z-index:12}#bar{position:absolute;inset:0;z-index:13;align-content:center;background:#050814ee}#bar[hidden]{display:none}#stress{position:absolute;top:5px;right:6px;background:#000c;padding:3px;font-size:12px;pointer-events:none}#stress{left:6px;right:auto;display:flex;gap:6px;align-items:center;z-index:2}#stress progress{width:clamp(38px,12vw,100px);height:9px;accent-color:#c58b60}#stressPct{min-width:4ch;text-align:right}#hint{top:29px}#toast{top:28px}#hint{max-width:68%}.paper{background:#b9d7ea;color:#101933;padding:9px;white-space:pre-wrap;overflow-wrap:anywhere}body.full{height:100vh;height:100dvh;overflow:hidden}body.full #stage{flex:1;min-height:0;container-type:size}body.full #wrap{width:min(100cqw,calc(100cqh * 16 / 9));box-sizing:border-box;border:0}body.full #dlg{max-height:32dvh;overflow:auto;flex:none;margin:0}body.full #dpad{flex:none}body.full #dpad button{height:clamp(24px,6dvh,48px)}#panel.murray-title{inset:0;border:0;padding:clamp(10px,2vw,25px);box-sizing:border-box;background:radial-gradient(ellipse at top,#242944,#090b16 74%);z-index:8;text-align:left}.murray-start{box-sizing:border-box;max-width:440px;margin:auto;padding:clamp(10px,2vw,24px);border:1px solid #a98e60;background:#111526;color:#f0e3c7;box-shadow:0 0 0 4px #111526,0 0 0 5px #7c6645}.murray-start h1{margin:0;font-size:clamp(24px,5vw,46px);letter-spacing:.16em}.murray-start p{margin:4px 0 9px}.murray-start .filetag{color:#d1aa74;letter-spacing:.13em;font-size:11px}.murray-start .intro{border-bottom:1px solid #776747;padding-bottom:6px}.murray-start #nm{box-sizing:border-box;width:100%;padding:6px 8px;font:inherit;color:#f0e3c7;background:#080b15;border:1px solid #a98e60}.murray-start fieldset{margin:8px 0;border:1px solid #776747;padding:4px 8px}.murray-start fieldset label{margin-right:16px}.murray-start fieldset p{font-size:12px;margin:3px 0}.murray-start .start-actions{display:flex;gap:8px}.murray-start button:disabled{opacity:.5;cursor:not-allowed}.murray-start :focus-visible{outline:2px solid #ffd38c;outline-offset:2px}</style></head><body>
-<div id="stage"><div id="wrap"><canvas id="c" width="256" height="144"></canvas><div id="hint"></div><div id="toast"></div>
+body{font-family:"Courier New","Noto Sans Mono CJK TC","Microsoft JhengHei",monospace}#endt .sub.en{font-family:inherit}#stage{width:100%;display:grid;place-items:center}#settings{position:absolute;bottom:5px;right:5px;z-index:12}#bar{position:absolute;inset:0;z-index:13;align-content:center;background:#050814ee}#bar[hidden]{display:none}#stress{position:absolute;top:5px;right:6px;background:#000c;padding:3px;font-size:12px;pointer-events:none}#toast{top:28px}#hint{max-width:68%}.paper{background:#b9d7ea;color:#101933;padding:9px;white-space:pre-wrap;overflow-wrap:anywhere}body.full{height:100vh;height:100dvh;overflow:hidden}body.full #stage{flex:1;min-height:0;container-type:size}body.full #wrap{width:min(100cqw,calc(100cqh * 16 / 9));box-sizing:border-box;border:0}body.full #dlg{max-height:32dvh;overflow:auto;flex:none;margin:0}body.full #dpad{flex:none}body.full #dpad button{height:clamp(24px,6dvh,48px)}#panel.murray-title{inset:0;border:0;padding:clamp(10px,2vw,25px);box-sizing:border-box;background:radial-gradient(ellipse at top,#242944,#090b16 74%);z-index:8;text-align:left}.murray-start{box-sizing:border-box;max-width:440px;margin:auto;padding:clamp(10px,2vw,24px);border:1px solid #a98e60;background:#111526;color:#f0e3c7;box-shadow:0 0 0 4px #111526,0 0 0 5px #7c6645}.murray-start h1{margin:0;font-size:clamp(24px,5vw,46px);letter-spacing:.16em}.murray-start p{margin:4px 0 9px}.murray-start .filetag{color:#d1aa74;letter-spacing:.13em;font-size:11px}.murray-start .intro{border-bottom:1px solid #776747;padding-bottom:6px}.murray-start #nm{box-sizing:border-box;width:100%;padding:6px 8px;font:inherit;color:#f0e3c7;background:#080b15;border:1px solid #a98e60}.murray-start fieldset{margin:8px 0;border:1px solid #776747;padding:4px 8px}.murray-start fieldset label{margin-right:16px}.murray-start fieldset p{font-size:12px;margin:3px 0}.murray-start .start-actions{display:flex;gap:8px}.murray-start button:disabled{opacity:.5;cursor:not-allowed}.murray-start :focus-visible{outline:2px solid #ffd38c;outline-offset:2px}</style></head><body>
+<div id="stage"><div id="wrap"><canvas id="c" width="192" height="108"></canvas><div id="hint"></div><div id="toast"></div>
 <div id="ctx"><div id="ctxt"></div></div><div id="ink"><img id="inkimg"></div><div id="panel"></div><div id="fade"></div>
-<div id="end"><div id="endbg"></div><video id="endv" playsinline preload="auto"></video><div id="endt"></div></div><div id="stress"><span>精神壓力</span><progress id="stressMeter" max="50" value="0" aria-label="精神壓力"></progress><output id="stressPct"></output></div><button id="settings" aria-expanded="false">設定</button><div id="bar" hidden><button id="bMute">🔊 音效：開</button><button id="bSafe">安全模式：關</button><button id="bNew">重新開始</button><button id="full">全螢幕</button><button id="back">返回遊戲</button></div></div></div>
+<div id="end"><div id="endbg"></div><video id="endv" playsinline preload="auto"></video><div id="endt"></div></div><div id="stress"></div><button id="settings" aria-expanded="false">設定</button><div id="bar" hidden><button id="bMute">🔊 音效：開</button><button id="bSafe">安全模式：關</button><button id="bNew">重新開始</button><button id="full">全螢幕</button><button id="back">返回遊戲</button></div></div></div>
 <div id="dlg"></div>
 <div id="dpad"><span></span><button data-k="ArrowUp">▲</button><span></span><button data-k="ArrowLeft">◀</button><button data-k=" ">●</button><button data-k="ArrowRight">▶</button><span></span><button data-k="ArrowDown">▼</button><span></span></div>
 <script>
@@ -45,7 +45,7 @@ const W=384,H=216,$=id=>document.getElementById(id),cv=$("c"),screen=cv.getConte
 const pic={};Object.keys(IMG).forEach(k=>{const i=new Image();i.src=IMG[k];pic[k]=i});
 $("inkimg").src=IMG.inkhand;
 let PN="Liam",modal=true,safe=false,mute=false,keys={},T=0,actx=null,gain=null,shakeT=0,JT=false,bgmG=null,bgmB=null,bgmOn=false,bgmT=null,bgmOff=false;
-const BGM_VOL=1.05;
+const BGM_VOL=.85;
 const S={scene:"office",ents:[],hots:[],props:[],feet:[],limbs:[],blood:[],night:false,dark2:false,hintTxt:"",bgo:null,memPhase:1,scareAt:0,scareUsed:false,scareUntil:0};
 const P={x:190,y:190,face:1};
 const SC={
@@ -129,7 +129,7 @@ function useHot(h){if(!h)return;if(h.door||/門/.test(h.label||""))doorSfx();h.a
 $("bMute").onclick=()=>{mute=!mute;$("bMute").textContent=mute?"🔇 音效：關":"🔊 音效：開";if(gain)gain.gain.value=mute?0:.04;if(bgmG&&actx)bgmG.gain.setTargetAtTime((mute||bgmOff)?0:BGM_VOL,actx.currentTime,.12);const v=$("endv");v.muted=mute;audio();if(!mute)scheduleBGM()};
 $("bSafe").onclick=()=>{safe=!safe;$("bSafe").textContent="安全模式："+(safe?"開（無閃爍／抖動）":"關")};
 $("bNew").onclick=()=>{if(confirm("清除存檔並重新開始？")){localStorage.removeItem("murray_rpg3");location.reload()}};
-function chap(id){S.shift=id;localStorage.setItem("murray_rpg3",JSON.stringify({id,PN,pressure,pressureScale:50,visits}));toast("進度已存檔（localStorage）")}
+function chap(id){S.shift=id;localStorage.setItem("murray_rpg3",JSON.stringify({id,PN,pressure,visits}));toast("進度已存檔（localStorage）")}
 function shake(){if(!safe)shakeT=22;wind();blip(110,.5,.04)}
 function fade(text,mid,after){modal=true;const f=$("fade");f.textContent="";f.classList.add("on");
 setTimeout(()=>{f.textContent=text||"";setTimeout(()=>{mid&&mid();setTimeout(()=>{f.classList.remove("on");f.textContent="";setTimeout(()=>{after&&after()},650)},250)},text?1500:300)},650)}
@@ -160,7 +160,7 @@ const GR_DOTS=()=>"…Morning…";
 function greetHots(names,fn){return names.map(n=>({x:SEAT[n][0],y:184,label:n,act:()=>say([{n,t:fn(n)}])}))}
 const deskHot=act=>({x:192,y:150,label:"辦公桌",act});
 function work(then){modal=true;fade("上班",null,()=>{if(!visits.d1)return toiletDuty("d1",false,then);if(S.shift==="d2"&&!visits.d2)return toiletDuty("d2",false,then);then()})}
-function spawnGhost(w,x,y,ms){raise(2);const e=E("g"+Math.random(),w+"G",x,y,{ghost:1,born:Date.now(),until:Date.now()+ms});S.ents.push(e);setTimeout(()=>{S.ents=S.ents.filter(z=>z!==e)},ms+100)}
+function spawnGhost(w,x,y,ms){const e=E("g"+Math.random(),w+"G",x,y,{ghost:1,born:Date.now(),until:Date.now()+ms});S.ents.push(e);setTimeout(()=>{S.ents=S.ents.filter(z=>z!==e)},ms+100)}
 const ghostW=()=>Math.random()<.5?"M":"F";
 /* 走廊血跡 */
 function mkBlood(x,y,r){return{x,y,r,sp:Array.from({length:6+Math.floor(Math.random()*5)},()=>({dx:(Math.random()-.5)*r*3.2,dy:(Math.random()-.5)*r*1.5,s:1+Math.random()*2.6}))}}
@@ -178,7 +178,7 @@ c.onclick=()=>{if(i<CTXP.length-1)startCtx(i+1);else{c.style.display="none";c.on
 function title(){const p=$("panel");p.style.display="block";let sv=null;try{sv=JSON.parse(localStorage.getItem("murray_rpg3"))}catch(e){}
 p.innerHTML=`<h2>美利樓</h2><div>輸入你的英文名（預設 Liam）：<input id="nm" maxlength="12" value="Liam" style="font-size:16px;padding:4px"></div><br><button id="st">開始</button> ${sv?`<button id="ct">繼續</button>`:""}`;
 $("st").onclick=()=>{PN=($("nm").value.replace(/[^A-Za-z .'-]/g,"").trim())||"Liam";p.style.display="none";audio();startCtx(0)};
-if(sv)$("ct").onclick=()=>{PN=sv.PN||"Liam";pressure=Math.max(0,Math.min(50,Math.round((Number(sv.pressure)||0)/(sv.pressureScale===50?1:2))));visits={...sv.visits};p.style.display="none";refreshStress();audio();CH[sv.id]()}}
+if(sv)$("ct").onclick=()=>{PN=sv.PN||"Liam";pressure=Number(sv.pressure)||0;visits={...sv.visits};p.style.display="none";refreshStress();audio();CH[sv.id]()}}
 /* ---------- 第一天 ---------- */
 function ch_d1(){chap("d1");modal=true;fade("",()=>go("office",192,192,seated(ALL4),[...greetHots(ALL4,GR_RAND),deskHot(d1work)],{hint:"和同事互動；走到上方的辦公桌上班"}),()=>say([nar("今天是在新辦公室上班的第二個星期，大家基本上已經把東西整理好了。")]))}
 function d1work(){work(()=>fade("午休",()=>go("office",192,172,[],[doorHot("l","左邊的門（出去吃飯）",d1corr)],{hint:"午休：從辦公室左方的門出去吃飯"}),()=>{modal=false}))}
@@ -197,7 +197,7 @@ fx(()=>{S.memPhase=1.8}),
 nar("她轉過頭，望向聲音的方向。"),
 "Jessica|And…",
 fx(()=>{S.memPhase=2}),
-fx(()=>raise(1)),"Jessica|I saw a pair of cut hands operating…",
+"Jessica|I saw a pair of cut hands operating…",
 "Jessica|Typing… on my typewriter.",
 fx(()=>{S.memPhase=2.5;S.paperAt=T;blip(260,.22,.018)}),
 nar("紙從滾筒鬆脫，飄到 Jessica 身旁。"),
@@ -214,20 +214,20 @@ function lunchEnd(){say(["M4|May, remember to contact the technician to check th
 function ch_blue1(){chap("blue1");modal=true;fade("",()=>go("office",192,152,seated(["May","Ching","Jayden"]),[],{}),()=>say([fx(shake),nar("曬圖室傳來 Wyman 的叫聲。")],()=>{S.hots=[doorHot("r","右邊的門（曬圖室）",enterBlue1)];S.hintTxt="曬圖室傳來叫聲，走到右邊的門";}))}
 function enterBlue1(){modal=true;fade("",()=>go("blue",300,190,[E("Wyman","M1",150,178,{shake:1})],[{x:178,y:190,label:"Wyman",act:blueTalk1}],{hint:"走近發抖的 Wyman"}),()=>{modal=false})}
 function blueTalk1(){visitBlue("blue1");S.hots=[];$("ink").style.display="block";say([nar("Wyman 整隻手都沾滿黑墨，站在藍曬機前發抖。")],()=>ask("你怎麼看？",[
-{t:"有鬼",fn:()=>say(["M4|Wyman, look at me.","M4|Maybe something happened, maybe not.","M4|But I’m here, and I’m not leaving. Sit down.",fx(()=>raise(1)),"Wyman|Sir, the machine… It started by itself.","M4|Then we’ll ask the technician to look at it. Wash your hands first."],endBlue1)},
+{t:"有鬼",fn:()=>say(["M4|Wyman, look at me.","M4|Maybe something happened, maybe not.","M4|But I’m here, and I’m not leaving. Sit down.","Wyman|Sir, the machine… It started by itself.","M4|Then we’ll ask the technician to look at it. Wash your hands first."],endBlue1)},
 {t:"沒有鬼",fn:()=>say(["M4|It’s ink, Wyman. The machine has been leaking since we moved. Come, let’s wash it off.","Wyman|But sir, I didn’t touch the lever…","M4|Then we’ll let the technician explain it."],endBlue1)}]))}
 function endBlue1(){$("ink").style.display="none";fade("",null,ch_d2)}
 /* ---------- 第二天 ---------- */
 function ch_d2(){chap("d2");modal=true;fade("",()=>go("office",192,192,seated(ALL4),[...greetHots(ALL4,n=>n==="Wyman"?"Morning… sir. …":GR_RAND()),deskHot(d2work)],{hint:"和同事互動；走到上方的辦公桌上班"}),()=>{modal=false})}
 function d2work(){S.hots=[];work(()=>{S.ents.push(E("Tech","TC",16,136));walk("Tech",150,188,()=>say(["技術員|早晨呀，係咪要整藍曬機？","Wyman|係呀係呀！","Wyman|Sir, the technician is here.","M4|Please come with me."],blueD2))})}
-function blueD2(){visitBlue("blue2");fade("",()=>go("blue",260,190,[E("Wyman","M1",150,178),E("Tech","TC",196,186)],[],{}),()=>say(["技術員|乜事都冇喎。","技術員|Roller, 墨箱呢啲全部都冇問題喎。","Wyman|There’s nothing wrong with it, sir.","M4|Really?","Wyman|The rollers, the ink, the feed are all fine.","M4|But there are always cracks and lines on the papers printed out…","M4|which we’ve never seen before we moved here.","Wyman|我哋搬咗部機過嚟之後啲紙就有裂紋同線。","Wyman|同埋...","Wyman|我尋日淨係㩒掣就突然間成手係墨...","技術員|…","技術員|我只可以話出現裂紋呢啲可能係個roller有問題。","技術員|但你成手係墨...","技術員|可能要去廟搞一搞。","技術員|我聽講以前啲日本仔就係喺呢幢樓殺人。",fx(()=>raise(1)),"技術員|所以都幾猛吓...",
-fx(()=>getE("Wyman").shake=1),"Wyman|（發抖）…","Wyman|（發抖）一定係...","M4|Wyman?","M4|What did he say?","Wyman|Sir…","Wyman|…",fx(()=>raise(1)),"Wyman|There really is a ghost…","M4|…"],()=>ask("你怎麼回應？",[
+function blueD2(){visitBlue("blue2");fade("",()=>go("blue",260,190,[E("Wyman","M1",150,178),E("Tech","TC",196,186)],[],{}),()=>say(["技術員|乜事都冇喎。","技術員|Roller, 墨箱呢啲全部都冇問題喎。","Wyman|There’s nothing wrong with it, sir.","M4|Really?","Wyman|The rollers, the ink, the feed are all fine.","M4|But there are always cracks and lines on the papers printed out…","M4|which we’ve never seen before we moved here.","Wyman|我哋搬咗部機過嚟之後啲紙就有裂紋同線。","Wyman|同埋...","Wyman|我尋日淨係㩒掣就突然間成手係墨...","技術員|…","技術員|我只可以話出現裂紋呢啲可能係個roller有問題。","技術員|但你成手係墨...","技術員|可能要去廟搞一搞。","技術員|我聽講以前啲日本仔就係喺呢幢樓殺人。","技術員|所以都幾猛吓...",
+fx(()=>getE("Wyman").shake=1),"Wyman|（發抖）…","Wyman|（發抖）一定係...","M4|Wyman?","M4|What did he say?","Wyman|Sir…","Wyman|…","Wyman|There really is a ghost…","M4|…"],()=>ask("你怎麼回應？",[
 {t:"懷疑真的有鬼",fn:()=>say(["M4|…","M4|go home and take a rest first.","Wyman|But…","M4|don’t worry about your work.","M4|I will handle it tonight."],()=>fade("",null,ch_n2))},
 {t:"苛責",fn:()=>say(["M4|Stop saying spooky tales, Wyman.","M4|You know it is not real right?","M4|You need to go home and take a rest.","Wyman|But…","M4|don’t worry about your work.","M4|I will handle it tonight."],()=>fade("",null,ch_n2))}])))}
 /* ---------- 夜晚加班與廁所（第二天） ---------- */
-function ch_n2(){if(!visits.blueNight){overtime("n2");return blueDuty(ch_n2)}overtime("n2");chap("n2");modal=true;fade("",()=>go("office",192,152,[],[],{night:true}),()=>say(["M4|？",fx(()=>{spawnGhost(ghostW(),192,176,1300);blip(150,.4,.03)}),"M4|huh?","M4|…","M4|fine.","M4|poop and go home."],()=>{S.hots=[doorHot("l","左邊的門（去廁所）",()=>corrDark(()=>toiletN2()))];S.hintTxt="離開辦公室，經過走廊去廁所"}))}
+function ch_n2(){if(!visits.blueNight){raise(12);return blueDuty(ch_n2)}chap("n2");modal=true;fade("",()=>go("office",192,152,[],[],{night:true}),()=>say(["M4|？",fx(()=>{spawnGhost(ghostW(),192,176,1300);blip(150,.4,.03)}),"M4|huh?","M4|…","M4|fine.","M4|poop and go home."],()=>{S.hots=[doorHot("l","左邊的門（去廁所）",()=>corrDark(()=>toiletN2()))];S.hintTxt="離開辦公室，經過走廊去廁所"}))}
 function corrDark(next){modal=true;fade("",()=>{const L=[],k=1+Math.floor(Math.random()*2);for(let i=0;i<k;i++)L.push({k:["limb_h1","limb_h2","limb_ft"][Math.floor(Math.random()*3)],x:100+Math.random()*220,y:170+Math.random()*34,r:Math.random()*6.28,seen:0});go("corr",20,186,[],[{x:352,y:188,label:"走廊盡頭",door:1,act:()=>{S.hots=[];next()}}],{night:true,hint:"走廊一片漆黑，沿走廊向右走"});S.limbs=L;S.dark2=true;S.scareAt=70+Math.random()*120;for(let i=0;i<6;i++)addBlood(50+Math.random()*290,168+Math.random()*34,9+Math.random()*11);L.forEach(z=>addBlood(z.x,z.y,14));corrStart(1,false)},()=>{modal=false})}
-function limbCheck(){if(!S.dark2||modal)return;const l=S.limbs.find(z=>!z.seen&&Math.hypot(z.x-P.x,z.y-P.y)<52);if(l){l.seen=1;raise(2);modal=true;shake();addBlood(l.x,l.y,16);say(["M4|！！！！！！！！！","M4|…","M4|Don't look down. Just keep walking."])}}
+function limbCheck(){if(!S.dark2||modal)return;const l=S.limbs.find(z=>!z.seen&&Math.hypot(z.x-P.x,z.y-P.y)<52);if(l){l.seen=1;raise(13);modal=true;shake();addBlood(l.x,l.y,16);say(["M4|！！！！！！！！！","M4|…","M4|Don't look down. Just keep walking."])}}
 function toiletN2(){visits.n2=true;modal=true;fade("",()=>go("toilet",190,196,[],[],{night:true,feet:[0,1,2,3]}),()=>say(["M4|…","M4|busy..."],toiletAsk))}
 function toiletAsk(){ask("你要怎麼做？",[
 {t:"原地等",fn:()=>say(["M4|…Hello? Anyone there?",nar("等待"),nar("沒有回應")],toiletAsk)},
@@ -237,7 +237,7 @@ function toiletAsk(){ask("你要怎麼做？",[
 /* ---------- 第三天：署長辦公室 ---------- */
 function bossGo(lines,after){modal=true;fade("",()=>go("boss",200,198,[E("Boss","M3",190,152)],[],{}),()=>say(lines,after))}
 function bossD3a(){bossGo(["M4|Sir, may I report something about the staff?","Frederick Shanks|Go ahead.","M4|Several of the Chinese staff have not been working well lately. They say the building is haunted.","Frederick Shanks|Haunted?",
-fx(()=>{S.ents.push(E("Jessica","F3",20,200,{cry:1}));walk("Jessica",140,200)}),"Jessica|Sir… forgive me for coming in like this.",fx(()=>raise(1)),"Jessica|Last night I saw a headless ghost!","Frederick Shanks|…Calm down, Jessica.","Frederick Shanks|If this goes on, no one will be able to work.","Frederick Shanks|I will invite a pastor to the building."],corrBack)}
+fx(()=>{S.ents.push(E("Jessica","F3",20,200,{cry:1}));walk("Jessica",140,200)}),"Jessica|Sir… forgive me for coming in like this.","Jessica|Last night I saw a headless ghost!","Frederick Shanks|…Calm down, Jessica.","Frederick Shanks|If this goes on, no one will be able to work.","Frederick Shanks|I will invite a pastor to the building."],corrBack)}
 function bossD3b(){bossGo(["M4|Sir, I need to report something.","M4|Last night I stayed late. In the toilet, there was a pair of feet under every stall door.","M4|When I opened the first door, no one was inside.","M4|The staff are frightened, sir. I would like to request a pastor.","Frederick Shanks|…","Frederick Shanks|Very well. I will invite a pastor."],corrBack)}
 function corrBack(){modal=true;fade("",()=>{go("corr",350,188,[],[{x:16,y:188,label:"辦公室",door:1,act:()=>{S.hots=[];ch_d3()}}],{hint:"走回辦公室（走廊左端）"});corrStart(-1,true)},()=>{modal=false})}
 /* ---------- 第三天：辦公室 ---------- */
@@ -252,21 +252,21 @@ fx(()=>{getE("Wyman").shake=1;P.x=244;P.y=194;P.face=1}),"M4|Calm Down a bit Wym
 function ch_d6(){chap("d6");modal=true;fade("",()=>go("office",192,192,seated(["Jayden","Ching","May"]),[...greetHots(["Jayden","Ching","May"],GR_DOTS),deskHot(()=>{S.hots=[];work(()=>say([nar("桌上是Wyman 的sick leave信。")],()=>fade("",null,ch_d7)))})],{hint:"和同事互動；走到上方的辦公桌上班"}),()=>{modal=false})}
 /* ---------- 第七天 ---------- */
 function ch_d7(){chap("d7");JT=false;modal=true;fade("",()=>go("office",192,192,seated(["Jayden","May"]),[...greetHots(["May"],GR_DOTS),{x:SEAT.Jayden[0],y:184,label:"Jayden",act:jaydenTalk},deskHot(d7desk)],{hint:"和 Jayden 談談；走到上方的辦公桌"}),()=>{modal=false})}
-function jaydenTalk(){say(["M4|Are you guys ok?","Jayden|…","Jayden|Not really sir.",fx(()=>raise(1)),"Jayden|The ghost stories have tortured us badly.","M4|…"],()=>ask("你怎麼回應？",[
+function jaydenTalk(){say(["M4|Are you guys ok?","Jayden|…","Jayden|Not really sir.","Jayden|The ghost stories have tortured us badly.","M4|…"],()=>ask("你怎麼回應？",[
 {t:"簡單安慰",fn:()=>say(["M4|Just don’t think about it.","M4|You know it is fake.","Jayden|…","Jayden|Sir there’s a local idiom.","Jayden|\"It is better to believe something is real or true than to believe it is nonexistent or false.\"","M4|…"],()=>{JT=true})},
 {t:"想個辦法",fn:()=>say(["M4|…","M4|Is there anything I can actually help with?","Jayden|…","Jayden|Maybe…","Jayden|Inviting Taoist or monk…?","Jayden|I know you do not believe in these but…","Jayden|Experts know best.","M4|…","M4|ok.","M4|I will consider."],()=>{JT=true})}]))}
 function d7desk(){if(!JT){toast("先和 Jayden 談談");return}S.hots=[];ask("你要怎麼做？",[
 {t:"A：上班",fn:()=>work(()=>say([nar("桌上是Wyman和Ching 的sick leave信。")],()=>fade("需要加班",null,ch_n7)))},
 {t:"B：找署長",fn:()=>fade("",null,ending1)}])}
 /* ---------- 夜晚加班與廁所（第七天） ---------- */
-function ch_n7(){overtime("n7");chap("n7");modal=true;fade("",()=>go("office",192,152,[],[],{night:true}),()=>say(["M4|？",fx(()=>{spawnGhost(ghostW(),192,176,1300);blip(150,.4,.03)}),"M4|huh?","M4|…"],()=>ask("你怎麼做？",[
+function ch_n7(){raise(12);chap("n7");modal=true;fade("",()=>go("office",192,152,[],[],{night:true}),()=>say(["M4|？",fx(()=>{spawnGhost(ghostW(),192,176,1300);blip(150,.4,.03)}),"M4|huh?","M4|…"],()=>ask("你怎麼做？",[
 {t:"1：眼花而已",fn:()=>say(["M4|…","M4|This bloody hell lighting...","M4|I must be too tired."],()=>fade("",null,ch_d8))},
 {t:"2：走！！！！",fn:()=>say([nar("M4 跑出辦公室。")],()=>corrDark(()=>ask("你怎麼想？",[
 {t:"A：眼花而已",fn:()=>say(["M4|I’m just too tired…","M4|I’M JUST TOO TIRED!!!"],()=>fade("",null,ch_d8))},
 {t:"B：Jayden is right.",fn:()=>say(["M4|…","M4|Jayden is right.","M4|We need some help from the monks."],()=>fade("",null,ending3))}])))}])))}
 /* ---------- 第八天 ---------- */
 function ch_d8(){chap("d8");modal=true;fade("",()=>go("office",192,192,[],[deskHot(()=>{S.hots=[];ask("你要怎麼做？",[{t:"上班",fn:()=>work(()=>say([nar("桌上是Wyman、Jayden、Ching和May 的sick leave信。"),"M4|…","M4|?","M4|Jayden got hit by a car right outside the office?","M4|Why are there so many accidents on this road…"],()=>fade("需要加班",null,ch_n8)))}])})],{hint:"走到上方的辦公桌上班"}),()=>{modal=false})}
-function ch_n8(){overtime("n8");chap("n8");modal=true;fade("",()=>go("office",192,152,[],[],{night:true}),()=>say(["M4|？",fx(()=>{spawnGhost(ghostW(),192,176,1300);blip(150,.4,.03)}),"M4|huh?","M4|…"],n8ask))}
+function ch_n8(){raise(12);chap("n8");modal=true;fade("",()=>go("office",192,152,[],[],{night:true}),()=>say(["M4|？",fx(()=>{spawnGhost(ghostW(),192,176,1300);blip(150,.4,.03)}),"M4|huh?","M4|…"],n8ask))}
 function n8ask(){ask("你怎麼做？",[
 {t:"1：眼花而已",fn:()=>say(["M4|…","M4|This bloody hell lighting...","M4|I must be too tired."],n8ask)},
 {t:"2：走！！！！",fn:()=>say([nar("M4 跑出辦公室。")],()=>corrDark(()=>say(["M4|…","M4|Jayden is right.","M4|We need some help from the monks."],()=>fade("",null,ending3))))}])}
@@ -317,7 +317,7 @@ document.querySelectorAll("#dpad button").forEach(b=>{const k=b.dataset.k.toLowe
 b.addEventListener("touchstart",e=>{e.preventDefault();if(!menu.hidden)return;audio();if(k==" "){if(modal){const n=$("bn");n&&n.click()}else{useHot(near())}}else keys[k]=1});
 b.addEventListener("touchend",()=>keys[k]=0)});
 /* ---------- 走廊一次性鬼嚇 ---------- */
-function scareCheck(){if(!S.dark2||modal||S.scareUsed||safe)return;if(P.x>=S.scareAt){S.scareUsed=true;raise(2);S.scareUntil=Date.now()+420;shake();blip(120,.45,.05)}}
+function scareCheck(){if(!S.dark2||modal||S.scareUsed||safe)return;if(P.x>=S.scareAt){S.scareUsed=true;S.scareUntil=Date.now()+420;shake();blip(120,.45,.05)}}
 function drawScare(){const n=Date.now();if(!S.scareUntil||n>=S.scareUntil)return;const k=(S.scareUntil-n)/420;
 g.save();g.globalAlpha=.45*k;g.fillStyle="#000";g.fillRect(0,0,W,H);
 const gx=Math.max(24,Math.min(360,P.x+P.face*48)),gy=P.y-42;
@@ -331,19 +331,9 @@ let ox=0;if(e&&e.shake&&!safe)ox=Math.round((Math.random()-.5)*3);x+=ox;
 g.save();if(flip){g.translate(x,0);g.scale(-1,1);g.drawImage(im,-w/2,y-h)}else g.drawImage(im,x-w/2,y-h);g.restore();
 if(e&&e.cry){g.fillStyle="#7fc8ff";const t=(T/3)%14;g.fillRect(x-5,y-h+17+t,1,2);g.fillRect(x+4,y-h+17+((t+7)%14),1,2)}
 if(e&&e.bang&&e.bang>Date.now()){g.fillStyle="#ffdd44";g.font="bold 14px Courier New, monospace";g.fillText("!",x-3,y-h-4)}}
-function drawFrontOffice(){
- const r=(color,x,y,w,h)=>{g.fillStyle=color;g.fillRect(x,y,w,h)};
- r('#242a35',0,0,W,132);r('#171925',0,132,W,84);r('#34323a',0,123,W,10);r('#504741',0,115,W,4);
- for(let x=0;x<W;x+=37){g.strokeStyle='#242530';g.beginPath();g.moveTo(192+(x-192)*.55,133);g.lineTo(x,216);g.stroke()}
- for(const x of [28,92]){r('#4e473d',x,22,47,76);r('#0a1729',x+4,26,39,66);r('#302f37',x+22,26,3,66);r('#302f37',x+4,54,39,3);r('#625845',x-3,96,53,4)}
- r('#382e2d',309,24,51,104);r('#59483d',314,29,41,94);r('#2b303e',320,36,29,41);r('#ad9064',339,89,5,3);
- r('#5a4935',190,45,94,22);r('#b09971',193,48,88,16);g.fillStyle='#25242b';g.font='7px Courier New';g.fillText('GROUND FLOOR',202,55);g.fillText('RECEPTION',209,62);
- r('#584032',129,156,66,10);r('#382b2b',134,166,57,10);r('#36292b',135,176,5,24);r('#36292b',184,176,5,24);
- r('#664b37',227,186,81,7);r('#43312d',232,193,71,12);r('#191a25',235,199,65,6);
-}
 function drawMem(){
  const ph=S.memPhase,t=T-(S.mem0||0);g.fillStyle='#090b16';g.fillRect(0,0,W,H);
- drawFrontOffice();
+ const bg=pic.bg_memory;if(bg?.complete)g.drawImage(bg,0,0,W,H);
  g.fillStyle='#151a2b66';g.fillRect(0,0,W,H);
  g.fillStyle='#6b5039';g.fillRect(247,172,50,17);g.fillStyle='#b9ad92';g.fillRect(250,166,19,6);g.fillRect(277,170,15,5);
  const tw=pic.tw;if(tw?.complete)g.drawImage(tw,145,139,45,26);
@@ -376,7 +366,7 @@ if(keys.arrowleft||keys.a)dx-=sp;if(keys.arrowright||keys.d)dx+=sp;if(keys.arrow
 const c=SC[S.scene];if(dx)P.face=dx;
 if(S.scene!="mem"){const nx=Math.max(c.x[0],Math.min(c.x[1],P.x+dx)),ny=Math.max(c.y[0],Math.min(c.y[1],P.y+dy));if(!blocked(nx,P.y))P.x=nx;if(!blocked(P.x,ny))P.y=ny;if((dx||dy)&&T%14==0)blip(70,.08,.015)}}
 S.ents.forEach(e=>{if(e.tx!==undefined){const dx=e.tx-e.x,dy=e.ty-e.y,d=Math.hypot(dx,dy);if(d<1.5){e.x=e.tx;e.y=e.ty;e.tx=undefined;const f=e.cb;e.cb=null;f&&f()}else{e.x+=dx/d*1.2;e.y+=dy/d*1.2}}});
-if(menu.hidden){limbCheck();scareCheck();corrTick();stressTick();draw();screen.drawImage(world,0,0,256,144)}requestAnimationFrame(loop)}
+if(menu.hidden){limbCheck();scareCheck();corrTick();stressTick();draw();screen.drawImage(world,0,0,192,108)}requestAnimationFrame(loop)}
 
 let pressure=0,visits={},corr=null,shock=0,nextShock=0;
 const menu=$('bar'),settings=$('settings');
@@ -385,19 +375,18 @@ settings.onclick=()=>openMenu(menu.hidden);$('back').onclick=()=>openMenu(false)
 let expanded=false;
 function syncFull(){const on=!!document.fullscreenElement||expanded;document.body.classList.toggle('full',on);$('full').textContent=on?'離開全螢幕':'全螢幕'}
 $('full').onclick=async()=>{if(document.fullscreenElement){await document.exitFullscreen()}else if(expanded)expanded=false;else try{await document.documentElement.requestFullscreen()}catch{expanded=true}syncFull()};document.addEventListener('fullscreenchange',syncFull);
-function overtime(id){const key="overtime-"+id;if(!visits[key]){visits[key]=true;raise(3)}}
-function raise(n){pressure=Math.min(50,pressure+n);refreshStress()}
-function refreshStress(){const pct=pressure*2;const meter=$('stressMeter');meter.value=pressure;meter.setAttribute('aria-valuetext',pressure+' / 50（'+pct+'%）');$('stressPct').textContent=pct+'%'}
-function pick(o){if(!o)return;if(/^(?:有鬼|懷疑真的有鬼|B：Jayden is right)/.test(o.t))raise(5);o.fn()}
+function raise(n){pressure=Math.min(100,pressure+n);refreshStress()}
+function refreshStress(){const v='精神壓力 '+pressure+' / 100';if($('stress').textContent!==v)$('stress').textContent=v}
+function pick(o){if(!o)return;if(/^(?:有鬼|懷疑真的有鬼|B：Jayden is right)/.test(o.t))raise(16);o.fn()}
 function typeClick(vol=.012){if(!actx||mute||!menu.hidden)return;blip(800+Math.random()*480,.022,vol)}
 function voice(name){const low=/M4|Wyman|Jayden|Sir|Boss/.test(name),base=low?115:188,f=base*(.9+Math.random()*.26);if(!actx||mute||!menu.hidden)return;blip(f,.085,.022);blip(f*2.58,.065,.008)}
 const seg=typeof Intl.Segmenter==='function'?new Intl.Segmenter('zh-Hant',{granularity:'grapheme'}):null;
 const typing=new Map(),seenText=new WeakSet();let lastClick=0;
 function queueText(root){if(!root)return;const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;while(n=walker.nextNode()){if(seenText.has(n)||!n.data.trim()||n.parentElement.closest('script,style'))continue;seenText.add(n);const chars=seg?Array.from(seg.segment(n.data),a=>a.segment):Array.from(n.data);typing.set(n,{chars,i:0,start:0,voice:n.parentElement.closest('[data-voice]')?.dataset.voice});n.data=''}}
-const uiSelectors='#dlg,#ctxt,#endt,#fade,#toast,#hint,#panel,#bar,#settings,#dpad';
+const uiSelectors='#dlg,#ctxt,#endt,#fade,#toast,#hint,#stress,#panel,#bar,#settings,#dpad';
 const monitor=new MutationObserver(records=>{for(const r of records){if(!r.target.closest?.(uiSelectors))continue;for(const n of r.addedNodes){if(n.nodeType===3)queueText(r.target);else if(n.nodeType===1)queueText(n)}}});monitor.observe(document.body,{childList:true,subtree:true});document.querySelectorAll(uiSelectors).forEach(queueText);
 function typeFrame(now){for(const [n,a] of typing){if(!n.isConnected){typing.delete(n);continue}if(!n.parentElement.getClientRects().length)continue;if(!a.start)a.start=now;const j=Math.min(a.chars.length,1+Math.floor((now-a.start)/Math.max(7,Math.min(24,2600/a.chars.length))));if(j>a.i){n.data=a.chars.slice(0,j).join('');if(now-lastClick>32){typeClick();lastClick=now}if(a.voice&&Math.floor(j/3)!==Math.floor(a.i/3))voice(a.voice);a.i=j}if(j===a.chars.length)typing.delete(n)}requestAnimationFrame(typeFrame)}requestAnimationFrame(typeFrame);
-function toiletRoll(){return{blood:Math.random()<.40+pressure*.006,ghost:Math.random()<.45+pressure*.006,slot:Math.random()<.55?Math.floor(Math.random()*4):-1}}
+function toiletRoll(){return{blood:Math.random()<.40+pressure*.003,ghost:Math.random()<.45+pressure*.003,slot:Math.random()<.55?Math.floor(Math.random()*4):-1}}
 function blueRoll(){return{mark:['hand','crack','ink'][Math.floor(Math.random()*3)]}}
 function toiletDuty(id,night,done){const save={scene:S.scene,x:P.x,y:P.y,ents:S.ents,hots:S.hots,o:{night:S.night,props:S.props,hint:S.hintTxt}};
  fade('',()=>go('toilet',192,195,[],[{x:192,y:189,label:'查看洗手間',act:()=>{visits[id]=true;const e=S.event;if(e.ghost||e.slot>=0)blip(82,.32,.032);say([nar('你關掉水龍頭，準備離開。')],()=>fade('',()=>go(save.scene,save.x,save.y,save.ents,save.hots,save.o),done))}}],{night,hint:'走近洗手間中央，按 Space／Enter'}),()=>modal=false)}
@@ -406,12 +395,9 @@ function blueDuty(done){fade('',()=>go('blue',245,189,[],[{x:245,y:189,label:'�
 function requireVisits(done){for(const [id,night] of [['d1',false],['d2',false],['n2',true]])if(!visits[id]){toiletDuty(id,night,done);return true}if(!visits.blue1||!visits.blue2){if(!visits.blue1){fade('',()=>go('blue',245,189,[],[{x:245,y:189,label:'取走曬圖',act:()=>{visitBlue('blue1');done()}}],{}),()=>modal=false)}else blueDuty(done);return true}return false}
 function silhouette(x,y,sz,color){g.save();g.fillStyle=color;g.beginPath();g.ellipse(x,y-sz,sz*.52,sz*.68,0,0,7);g.fill();g.fillRect(x-sz*.7,y-sz*.5,sz*1.4,sz*.75);g.restore()}
 function eventVisual(){const e=S.event;if(!e)return;if(S.scene==='toilet'){
- const mx=28,my=77,mw=45,mh=40,mirrorGhost=e.ghost&&(safe||T%310>170),feet=e.slot>=0&&(safe||T%260>115);
- g.save();g.beginPath();g.rect(mx,my,mw,mh);g.clip();
- if(mirrorGhost)silhouette(mx+mw*.54,my+mh-1,13,'#222335bb');
- if(e.blood){g.fillStyle='#7f1426cc';for(let i=0;i<15;i++)g.fillRect(mx+3+(i*11)%36,my+4+(i*7)%26,2+i%4,2+i%7);g.fillRect(mx+19,my+17,3,15)}g.restore();
- if(feet){const x=64+e.slot*80;g.fillStyle='#b0b8bf';g.fillRect(x,157,7,8);g.fillRect(x+11,157,7,8)}
- if(mirrorGhost&&!e.mirrorSeen){e.mirrorSeen=true;raise(2)}if(feet&&!e.feetSeen){e.feetSeen=true;raise(2)}
+ if(e.ghost&&(safe||T%310>170))silhouette(166,111,13,'#222335bb');
+ if(e.blood){g.fillStyle='#7f1426cc';for(let i=0;i<12;i++)g.fillRect(147+(i*11)%39,91+(i*7)%19,2+i%4,2+i%6)}
+ if(e.slot>=0&&(safe||T%260>115)){const x=64+e.slot*80;g.fillStyle='#b0b8bf';g.fillRect(x,157,7,8);g.fillRect(x+11,157,7,8)}
  }else if(S.scene==='blue'){
  const x=257,y=133;g.fillStyle='#9db4dc';g.fillRect(x,y,42,23);g.fillStyle='#252d49';
  if(e.mark==='crack'){g.strokeStyle='#252d49';g.beginPath();g.moveTo(x+3,y+1);g.lineTo(x+19,y+12);g.lineTo(x+15,y+16);g.lineTo(x+31,y+22);g.stroke()}
@@ -422,10 +408,10 @@ const warpCanvas=document.createElement('canvas');warpCanvas.width=W;warpCanvas.
 function warp(a){if(safe)return;warpG.drawImage(world,0,0);for(let y=0;y<H;y+=4){const off=Math.round(a*Math.sin(T*.065+y*.077));g.fillStyle='#0a0812';g.fillRect(0,y,W,4);g.drawImage(warpCanvas,0,y,W,4,off,y,W,4)}}
 function corrStart(dir,day){const h=S.hots[0],exit=h.act;corr={dir,day,active:!day,trigger:(day?235:95)+Math.random()*60,laps:0,wait:0};h.act=()=>{if(!corr.active||(corr.laps>0&&Math.random()<.58)){corr=null;exit()}else{corr.laps++;corrReset(false)}}}
 function corrReset(caught){P.x=corr.dir>0?24:350;P.y=188;corr.x=P.x-corr.dir*110;corr.y=P.y;corr.wait=caught?115:0;if(!safe)blip(78,.23,.04)}
-function corrTick(){if(!corr||modal)return;const q=corr;if(!q.active){if((P.x-q.trigger)*q.dir<0)return;q.active=true}if(!q.seen){q.seen=true;raise(2)}if(q.x===undefined){q.x=P.x-q.dir*105;q.y=P.y}if(q.wait>0){q.wait--;return}const dx=P.x-q.x,dy=P.y-q.y,d=Math.hypot(dx,dy);if(d<11){corrReset(true);return}const v=(q.day?1.0:1.20)+pressure*.004;q.x+=dx/d*v;q.y+=dy/d*v}
-function corrVisual(){if(!corr?.active)return;if(corr.x!==undefined)silhouette(corr.x,corr.y,15,'#0c0818');warp(5+pressure*.13)}
-function stressTick(){if(safe||modal||pressure<10||!['office','blue','toilet','boss','corr'].includes(S.scene)||T<nextShock)return;if(Math.random()<.0007+pressure*.00020){raise(2);shock=T+Math.floor(18+pressure*.58);nextShock=T+Math.floor(660-pressure*8);blip(58,.35,.075)}}
-function stressVisual(){if(safe||modal)return;if(T<shock){silhouette(Math.max(30,Math.min(354,P.x+P.face*42)),P.y,18+pressure*.24,'#cbc3d9e6');warp(4+pressure*.20)}else if(!corr?.active&&pressure>=19&&T%440<55+pressure*1.30)warp(pressure*.15)}
+function corrTick(){if(!corr||modal)return;const q=corr;if(!q.active){if((P.x-q.trigger)*q.dir<0)return;q.active=true}if(q.x===undefined){q.x=P.x-q.dir*105;q.y=P.y}if(q.wait>0){q.wait--;return}const dx=P.x-q.x,dy=P.y-q.y,d=Math.hypot(dx,dy);if(d<11){corrReset(true);return}const v=(q.day?1.0:1.20)+pressure*.002;q.x+=dx/d*v;q.y+=dy/d*v}
+function corrVisual(){if(!corr?.active)return;if(corr.x!==undefined)silhouette(corr.x,corr.y,15,'#0c0818');warp(5+pressure*.065)}
+function stressTick(){if(safe||modal||pressure<20||!['office','blue','toilet','boss','corr'].includes(S.scene)||T<nextShock)return;if(Math.random()<.0007+pressure*.00010){shock=T+Math.floor(18+pressure*.29);nextShock=T+Math.floor(660-pressure*4);blip(58,.35,.075)}}
+function stressVisual(){if(safe||modal)return;if(T<shock){silhouette(Math.max(30,Math.min(354,P.x+P.face*42)),P.y,18+pressure*.12,'#cbc3d9e6');warp(4+pressure*.10)}else if(!corr?.active&&pressure>=38&&T%440<55+pressure*.65)warp(pressure*.075)}
 refreshStress();
 
 let lastHint=null;function setHint(v){if(v!==lastHint){lastHint=v;$("hint").textContent=v}}
